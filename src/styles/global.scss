@@ -1,0 +1,78 @@
+/* Color scheme  */
+$colors: (
+    "darker":  #18191A,
+    "dark":    #242526,
+    "normal":  #3A3B3C,
+    "light":   #B0B3B8,
+    "lighter": #E4E6E8,
+);
+
+* {
+    margin: 0mm;
+    border: 0mm;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: map-get($colors, "light");
+}
+
+:root {
+    background-color: map-get($colors, "darker");
+}
+
+.hover {
+    background-color: map-get($colors, "dark");
+}
+
+.side-bar {
+    background-color: map-get($colors, "normal");
+}
+
+.top-bar {
+    background-color: map-get($colors, "normal");
+}
+
+.card {
+    background-color: map-get($colors, "normal");
+}
+
+.primary-text {
+    color: map-get($colors, "lighter");
+}
+
+.secondary-text {
+    color: map-get($colors, "light");
+}
+
+.button {
+    /* Color styling */
+    color:           map-get($colors, "normal");
+    padding:         1em 2.5em;
+    text-decoration: none;
+    border-radius:   0.25em;
+
+    /* Background image */
+    background-image: linear-gradient(to right, #02AAB0,
+                                                #00CDAC,
+                                                #00CDAC,
+                                                #02AAB0);
+    background-size: 300%;
+    background-position: left;
+
+    transition: 0.5s background-position ease-in-out;
+}
+
+.button:hover {
+    background-position: right;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+img {
+    width:  auto;
+    height: auto;
+    max-width: 100%;
+}
