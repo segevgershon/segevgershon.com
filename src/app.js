@@ -1,3 +1,4 @@
+import Welcome from '~/pages/welcome/welcome';
 import '~/styles/columns.css';
 
 function App()
@@ -6,6 +7,7 @@ function App()
         <div>
             <div className="col-3"> </div>
             <div className="col-6">
+                <Welcome />
             </div>
             <div className="col-3"> </div>
         </div>
