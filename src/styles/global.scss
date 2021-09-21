@@ -16,6 +16,14 @@ $colors: (
     color: map-get($colors, "light");
 }
 
+@media (max-width:767px)
+{
+    *
+    {
+      text-align:center;
+    }
+}
+
 :root {
     background-color: map-get($colors, "darker");
 }
@@ -75,4 +83,13 @@ img {
     width:  auto;
     height: auto;
     max-width: 100%;
+}
+
+hr {
+    border-radius: 1px;
+    border: 1px solid map-get($colors, "normal");
+    color: map-get($colors, "normal");
+    height: 1px;
+    margin-bottom: 2vh;
+    width: 96%;
 }
