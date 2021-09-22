@@ -1,6 +1,9 @@
 import { Container, Row, Col } from 'react-grid-system'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab, faLinkedinIn, faSpotify, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn,
+         faSpotify,
+         faInstagram,
+         faGithub } from '@fortawesome/free-brands-svg-icons'
 import './footer.css'
 
 function Footer() {
@@ -8,6 +11,13 @@ function Footer() {
         <div><hr/><Container><Row>
 
             <Col md={8} sm={6} xs={12}>
+                <p style={{ "fontStyle" : "italic" }}>
+                    "Nobody exists on purpose.
+                    Nobody belongs anywhere.
+                    Everybody's gonna die.
+                    Come watch TV..."
+                </p>
+                <p> - Morty Sanchez </p>
             </Col>
 
             <Col md={4} sm={6} xs={12}>
