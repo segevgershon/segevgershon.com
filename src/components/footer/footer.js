@@ -17,7 +17,7 @@ function Footer() {
                     Everybody's gonna die.
                     Come watch TV..."
                 </p>
-                <p> - Morty Sanchez </p>
+                <p> - Morty Smith </p>
             </Col>
 
             <Col md={4} sm={6} xs={12}>
