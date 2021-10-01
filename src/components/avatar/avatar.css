@@ -1,0 +1,17 @@
+.aurora-line-container {
+    mix-blend-mode:   darken;
+    background-color: #18191A;
+    height:           100%;
+    position:         absolute;
+    top:              0;
+    z-index:          2;
+}
+
+.aurora-line {
+    background-color: white;
+    border-radius:    99999999999px;
+    box-shadow:       inset rgba(0,0,0,0.8) 0 0 10px;
+    left:             1px;
+    position:         absolute;
+    width:            60%;
+}
