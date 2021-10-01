@@ -81,11 +81,22 @@ function useDimensions (ref) {
     return dimensions;
 };
 
+function find_adjacent_width(container_width, item_width, max_delta, diff) {
+    if (container_width % item_width <= max_delta) {
+        return item_width;
+    }
+    return find_adjacent_width(container_width,
+                               item_width + diff,
+                               max_delta,
+                               diff);
+}
+
 function Avatar() {
     const aurora_bg =  useRef(null);
     const { width, height } = useDimensions(aurora_bg);
 
-    const item_width = 25;
+    // TODO: find minimal, between diff = 1 and diff = -1
+    const item_width = find_adjacent_width(width, 25, 2, 1);
     const item_offsets = () => ([...[...Array(Math.ceil(width / item_width))
                                 .keys()]
                                 .map(i => `${i * item_width}px`)]);
