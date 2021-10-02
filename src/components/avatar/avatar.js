@@ -1,6 +1,7 @@
 import Me from '~/assets/images/main-avatar.png';
 import { get_random_item } from '~/util';
 import React, { useRef , useState, useLayoutEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import './avatar.css';
 
 const containerStyle = {
@@ -54,6 +55,30 @@ const aurora = {
         )`,
 };
 
+const moveVerically = (from, to) => keyframes`
+    0%, 100% {
+        top: ${from}
+    }
+
+    50% {
+        top: ${to}
+    }
+`
+
+const AuroraLine = styled.div`
+    animation:                 ${props =>
+                                   moveVerically("0", `${ props.index * 2 }%`)};
+    animation-duration:        ${props => props.index + 3}s;
+    animation-iteration-count: infinite;
+    background-color:          white;
+    border-radius:             99999999999px;
+    box-shadow:                inset rgba(0,0,0,0.8) 0 0 0;
+    height:                    ${props => props.height};
+    left:                      1px;
+    position:                  absolute;
+    width:                     60%;
+`
+
 function useDimensions (ref) {
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
@@ -96,7 +121,7 @@ function Avatar() {
     const { width, height } = useDimensions(aurora_bg);
 
     // TODO: find minimal, between diff = 1 and diff = -1
-    const item_width = find_adjacent_width(width, 25, 2, 1);
+    const item_width = find_adjacent_width(width, 25, 2, -1);
     const item_offsets = () => ([...[...Array(Math.ceil(width / item_width))
                                 .keys()]
                                 .map(i => `${i * item_width}px`)]);
@@ -115,9 +140,8 @@ function Avatar() {
                             style={{ "left":value,
                                      "width":`${item_width}px`,
                                      "height":`${height}px` }}>
-                        <div className="aurora-line"
-                             style={{ "height":`${index_to_height(index)}%` }}>
-                        </div>
+                        <AuroraLine height={ `${index_to_height(index)}%` }
+                                    index={ index }/>
                     </div>
             })}
             <img style={ avatarStyle } alt="Failed to load avatar" src={ Me }/>
