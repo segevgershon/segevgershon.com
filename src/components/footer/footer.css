@@ -65,6 +65,10 @@
 {
     background-color: #1DB954;
 }
+.social-icons a.gitlab:hover
+{
+    background-color: #FC6D27;
+}
 @media (max-width: 767px)
 {
     .social-icons
