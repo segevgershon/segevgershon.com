@@ -69,7 +69,7 @@ const AuroraLine = styled.div`
     animation:                 ${props =>
                 moveVerically('0%', `${(100 - props.height) / 2 + 5}%`)};
     animation-delay:           ${props => props.index / 10}s;
-    animation-duration:        3s;
+    animation-duration:        5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     background-color:          white;
@@ -86,8 +86,8 @@ function useDimensions (ref) {
 
     useLayoutEffect(() => {
         const getDimensions = () => ({
-            width: ref.current.offsetWidth,
-            height: ref.current.offsetHeight,
+            width: ref.current.getBoundingClientRect().width,
+            height: ref.current.getBoundingClientRect().height,
         });
 
         const handleResize = () => {
@@ -142,8 +142,11 @@ function Avatar() {
                             style={{ "left":value,
                                      "width":`${item_width}px`,
                                      "height":`${height}px` }}>
-                        <AuroraLine height={ index_to_height(index) }
-                                    index={ index }/>
+                       { index !== Math.ceil(width / item_width) - 1 ||
+                         width % item_width === 0 ?
+                            <AuroraLine height={ index_to_height(index) }
+                                        index={ index }/>
+                             : <div/> }
                     </div>
             })}
             <img style={ avatarStyle } alt="Failed to load avatar" src={ Me }/>
