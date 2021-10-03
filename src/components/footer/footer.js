@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn,
          faSpotify,
          faInstagram,
-         faGithub } from '@fortawesome/free-brands-svg-icons'
+         faGithub,
+         faGitlab } from '@fortawesome/free-brands-svg-icons'
 import './footer.css'
 
 function Footer() {
@@ -24,6 +25,9 @@ function Footer() {
                 <ul className="social-icons">
                     <li><a className="github" href="https://github.com/GaintDwarf">
                         <FontAwesomeIcon icon={faGithub}/>
+                    </a></li>
+                    <li><a className="gitlab" href="https://gitlab.com/GaintDwarf">
+                        <FontAwesomeIcon icon={faGitlab}/>
                     </a></li>
                     <li><a className="instagram" href="https://www.instagram.com/segevgershon/">
                         <FontAwesomeIcon icon={faInstagram}/>
