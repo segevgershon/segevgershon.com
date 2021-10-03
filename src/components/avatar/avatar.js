@@ -67,13 +67,15 @@ const moveVerically = (from, to) => keyframes`
 
 const AuroraLine = styled.div`
     animation:                 ${props =>
-                                   moveVerically("0", `${ props.index * 2 }%`)};
-    animation-duration:        ${props => props.index + 3}s;
+                moveVerically('0%', `${(100 - props.height) / 2 + 5}%`)};
+    animation-delay:           ${props => props.index / 10}s;
+    animation-duration:        3s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     background-color:          white;
     border-radius:             99999999999px;
     box-shadow:                inset rgba(0,0,0,0.8) 0 0 0;
-    height:                    ${props => props.height};
+    height:                    ${props => props.height}%;
     left:                      1px;
     position:                  absolute;
     width:                     60%;
@@ -140,7 +142,7 @@ function Avatar() {
                             style={{ "left":value,
                                      "width":`${item_width}px`,
                                      "height":`${height}px` }}>
-                        <AuroraLine height={ `${index_to_height(index)}%` }
+                        <AuroraLine height={ index_to_height(index) }
                                     index={ index }/>
                     </div>
             })}
