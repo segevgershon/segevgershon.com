@@ -5,7 +5,24 @@ import { faLinkedinIn,
          faInstagram,
          faGithub,
          faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { get_random_item } from '~/util';
 import './footer.css'
+
+const quotes = [
+    { 'quote' : 'Nobody exists on purpose.' +
+                'Nobody belongs anywhere. ' +
+                'Everybody\'s gonna die. ' +
+                'Come watch TV...',
+        'by': 'Morty Smith' },
+
+    { 'quote' : 'I\'m not superstitious just a little stitious',
+        'by' : 'Michael Scott' },
+
+    { 'quote' : 'A clean box is a happy box',
+        'by' : 'Pete' },
+];
+
+const quote = get_random_item(quotes)
 
 function Footer() {
     return (
@@ -13,12 +30,9 @@ function Footer() {
 
             <Col md={8} sm={6} xs={12}>
                 <p style={{ "fontStyle" : "italic" }}>
-                    "Nobody exists on purpose.
-                    Nobody belongs anywhere.
-                    Everybody's gonna die.
-                    Come watch TV..."
+                    "{quote.quote}"
                 </p>
-                <p> - Morty Smith </p>
+                <p> - {quote.by} </p>
             </Col>
 
             <Col md={4} sm={6} xs={12}>
