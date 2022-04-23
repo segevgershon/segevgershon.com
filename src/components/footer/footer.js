@@ -46,11 +46,11 @@ function Footer() {
                     <li><a className="instagram" href="https://www.instagram.com/segevgershon/">
                         <FontAwesomeIcon icon={faInstagram}/>
                     </a></li>
-                    <li><a className="spotify" href="https://open.spotify.com/user/5wvconvwzeyxa0vb997ginzkv?si=437288757c3843e8">
-                        <FontAwesomeIcon icon={faSpotify}/>
-                    </a></li>
                     <li><a className="linkedin" href="https://www.linkedin.com/in/segev-gershon/">
                         <FontAwesomeIcon icon={faLinkedinIn}/>
+                    </a></li>
+                    <li><a className="spotify" href="https://open.spotify.com/user/5wvconvwzeyxa0vb997ginzkv?si=437288757c3843e8">
+                        <FontAwesomeIcon icon={faSpotify}/>
                     </a></li>
                 </ul>
             </Col>
