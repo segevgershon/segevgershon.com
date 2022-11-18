@@ -55,7 +55,7 @@ const aurora = {
         )`,
 };
 
-const moveVerically = (from, to) => keyframes`
+const moveVertically = (from, to) => keyframes`
     0%, 100% {
         top: ${from}
     }
@@ -67,7 +67,7 @@ const moveVerically = (from, to) => keyframes`
 
 const AuroraLine = styled.div`
     animation:                 ${props =>
-                moveVerically('0%', `${(100 - props.height) / 2 + 5}%`)};
+                moveVertically('0%', `${(100 - props.height) / 2 + 5}%`)};
     animation-delay:           ${props => props.index / 10}s;
     animation-duration:        5s;
     animation-iteration-count: infinite;
