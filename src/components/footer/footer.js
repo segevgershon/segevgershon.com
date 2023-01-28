@@ -9,7 +9,7 @@ import { get_random_item } from '~/util';
 import './footer.css'
 
 const quotes = [
-    { 'quote' : 'Nobody exists on purpose.' +
+    { 'quote' : 'Nobody exists on purpose. ' +
                 'Nobody belongs anywhere. ' +
                 'Everybody\'s gonna die. ' +
                 'Come watch TV...',
@@ -20,6 +20,13 @@ const quotes = [
 
     { 'quote' : 'A clean box is a happy box',
         'by' : 'Pete' },
+
+    { 'quote' : 'I order the food, you cook the food, ' +
+                'then the customer gets the food. ' +
+                'We do that for 40 years and then we die. ' +
+                'Sounds like a pretty good deal to me, ' +
+                'what do you say?',
+        'by' : 'Squidward Tentacles' },
 ];
 
 const quote = get_random_item(quotes)
