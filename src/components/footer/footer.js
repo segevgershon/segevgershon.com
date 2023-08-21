@@ -44,10 +44,10 @@ function Footer() {
 
             <Col md={4} sm={6} xs={12}>
                 <ul className="social-icons">
-                    <li><a className="github" href="https://github.com/GaintDwarf">
+                    <li><a className="github" href="https://github.com/segevgershon">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a></li>
-                    <li><a className="gitlab" href="https://gitlab.com/GaintDwarf">
+                    <li><a className="gitlab" href="https://gitlab.com/segevgershon">
                         <FontAwesomeIcon icon={faGitlab}/>
                     </a></li>
                     <li><a className="instagram" href="https://www.instagram.com/segevgershon/">
